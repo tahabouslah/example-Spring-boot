@@ -14,8 +14,33 @@ public class ExampleApplication {
 	}
 
 	@GetMapping("/greet")
-	public String greet() {
-		return "hello";
+	public GreetRespone greet() {
+		return new GreetRespone("hello");
+	}
+
+	class GreetRespone {
+		private String greet;
+
+		GreetRespone(String greet) {
+			this.greet = greet;
+		}
+
+		public String getGreet() {
+			return greet;
+		}
+
+		@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			return super.toString();
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			// TODO Auto-generated method stub
+			return super.equals(obj);
+		}
+
 	}
 
 }
