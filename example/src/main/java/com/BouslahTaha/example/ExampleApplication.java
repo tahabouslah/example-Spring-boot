@@ -2,8 +2,10 @@ package com.BouslahTaha.example;
 
 import java.util.List;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -97,16 +99,22 @@ public class ExampleApplication {
 
 	}
 
-	@PutMapping("{customerId}")
-	public void Update(@PathVariable("customerId") Integer id) {
-		// TODO: process PUT request
-		cr.deleteById(id);
-		Customer c = new Customer();
-		c.setAge(request.age());
-		c.setName(request.name());
-		c.setEmail(request.email());
-		cr.save(c);
+	// @PutMapping("path/{id}")
+	// public ResponseEntity<Customer> updateCustomer(@PathVariable Integer id, @RequestBody Customer customer) {
+	// 	//TODO: process PUT request
+		
+	// 	Customer existingCustomer = cr.findById(id);
+				
 
-	}
+	// 	existingCustomer.setName(customer.getName());
+	// 	existingCustomer.setEmail(customer.getEmail());
+	// 	// ... update other fields as needed ...
+
+	// 	Customer updatedCustomer = cr.save(existingCustomer);
+	// 	return ResponseEntity.ok(updatedCustomer);
+
+
+	// 	return null;
+	// }
 
 }
