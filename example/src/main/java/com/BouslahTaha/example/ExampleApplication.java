@@ -1,5 +1,7 @@
 package com.BouslahTaha.example;
 
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,10 +17,17 @@ public class ExampleApplication {
 
 	@GetMapping("/greet")
 	public GreetRespone greet() {
-		return new GreetRespone("hello");
+		GreetRespone response = new GreetRespone(
+				"hello",
+				List.of("Java", "Python", "PHP"),
+				new Person("taha"));
+		return response;
 	}
 
-	record GreetRespone(String greet) {
+	record Person(String name) {
+	}
+
+	record GreetRespone(String greet, List<String> favProgLang, Person person) {
 	}
 
 	// class GreetRespone {
