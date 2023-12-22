@@ -2,19 +2,19 @@ package com.BouslahTaha.example;
 
 import java.util.List;
 
-import org.apache.catalina.connector.Response;
+//import org.apache.catalina.connector.Response;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.http.ResponseEntity;
+//import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestParam;
+//import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PutMapping;
+//import org.springframework.web.bind.annotation.PutMapping;
 
 @SpringBootApplication
 @RestController
@@ -59,13 +59,11 @@ public class ExampleApplication {
 
 	// @Override
 	// public String toString() {
-	// // TODO Auto-generated method stub
 	// return super.toString();
 	// }
 
 	// @Override
 	// public boolean equals(Object obj) {
-	// // TODO Auto-generated method stub
 	// return super.equals(obj);
 	// }
 
@@ -94,14 +92,12 @@ public class ExampleApplication {
 
 	@DeleteMapping("{customerId}")
 	public void DeleteCustomer(@PathVariable("customerId") Integer id) {
-		// TODO: process POST request
 		cr.deleteById(id);
 
 	}
 
 	// @PutMapping("path/{id}")
 	// public ResponseEntity<Customer> updateCustomer(@PathVariable Integer id, @RequestBody Customer customer) {
-	// 	//TODO: process PUT request
 		
 	// 	Customer existingCustomer = cr.findById(id);
 				
